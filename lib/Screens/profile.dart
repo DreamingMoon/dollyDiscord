@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:dolly_discord/constants.dart';
 
 class ProfilePage extends StatelessWidget {
+  PicProfile gallery = PicProfile();
 
-String id = 'profile';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: kbColor,
       body: ListView(
         children: [
           Stack(
@@ -20,12 +20,12 @@ String id = 'profile';
                 height: 100,
                 color: Colors.blue,
               ),
-              const Positioned(
+              Positioned(
                 top: 50,
                 left: 20,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
-                  radius: 60.0,
+                  backgroundImage: kpicProfile() ,
                 ),
               ),
               const Positioned(
