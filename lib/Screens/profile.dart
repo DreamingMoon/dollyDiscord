@@ -1,13 +1,14 @@
+import 'package:dolly_discord/main.dart';
 import 'package:flutter/material.dart';
 import 'package:dolly_discord/constants.dart';
 
 class ProfilePage extends StatelessWidget {
-  PicProfile gallery = PicProfile();
+ static const String id = 'ProfilePage';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kbColor,
+      backgroundColor: kdollycolor,
       body: ListView(
         children: [
           Stack(
@@ -25,7 +26,7 @@ class ProfilePage extends StatelessWidget {
                 left: 20,
                 child: CircleAvatar(
                   backgroundColor: Colors.white,
-                  backgroundImage: kpicProfile() ,
+                  backgroundImage: FileImage(getImageFromGallery()),
                 ),
               ),
               const Positioned(
@@ -49,16 +50,16 @@ class ProfilePage extends StatelessWidget {
             lead: Icon(Icons.account_circle),
             text1: Text('Account'),
           ),
-          const Kcard(lead: Icon(Icons.edit), text1: Text('Profiles')),
+          const Kcard(
+            lead: Icon(Icons.edit),
+            text1: Text('Profiles'),
+          ),
           const Kcard(
               lead: Icon(Icons.shield), text1: Text('Privacy & Security')),
           const Kcard(lead: Icon(Icons.key), text1: Text('Authority Apps')),
           const Kcard(
               lead: Icon(Icons.desktop_windows), text1: Text('Devices')),
           const Kcard(lead: Icon(Icons.devices), text1: Text('Connections')),
-          const Kcard(
-              lead: Icon(Icons.account_box_rounded),
-              text1: Text('Friend Requests')),
           const Kcard(lead: Icon(Icons.qr_code), text1: Text('Scan QR Code')),
           const SizedBox(
             height: 40,

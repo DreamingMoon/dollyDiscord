@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "711898775028",
+    "project_id": "dolly-desktop",
+    "storage_bucket": "dolly-desktop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711898775028:android:17fddfb058d2873e870da1",
+        "android_client_info": {
+          "package_name": "com.dreamingmoon.dolly_discord"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711898775028-9nemh7ktu3htd1gboe5gqfe2brge5s10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxUmDWanqtAv77A9apxld4br9XWCNS5Wc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711898775028-9nemh7ktu3htd1gboe5gqfe2brge5s10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

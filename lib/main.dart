@@ -1,16 +1,11 @@
-import 'dart:io';
-
+import 'package:dolly_discord/Screens/notification.dart';
 import 'package:dolly_discord/Screens/profile.dart';
+import 'package:dolly_discord/Screens/register.dart';
 import 'package:dolly_discord/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:fluttericon/font_awesome_icons.dart';
-import 'Screens/direct_messages.dart';
-import 'Screens/friends.dart';
-import 'Screens/notification.dart';
 import 'Screens/profile_blanks.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:image_cropper/image_cropper.dart';
+import 'package:dolly_discord/Screens/register.dart';
 
 void main() {
   runApp(dollyDesktop());
@@ -20,7 +15,13 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: dollyDesktop(),
+      initialRoute: dollyDesktop.id,
+      routes: {
+        dollyDesktop.id: (context) => dollyDesktop(),
+        ProfilePage.id: (context) => ProfilePage(),
+        Notifications.id: (context) => Notifications(),
+        'SignUp':(context) => const SignUp(),
+      },
     );
   }
 }
@@ -56,18 +57,14 @@ class _HomeNavigationState extends State<HomeNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kbColor,
+      backgroundColor: kdollycolor,
       body: dollyDesktop(),
       bottomNavigationBar: BottomNavigationBar(items: <BottomNavigationBarItem>[
         const BottomNavigationBarItem(
             icon: Icon(
           Icons.nightlight,
         )),
-        const BottomNavigationBarItem(icon: Icon(FontAwesome.user_plus)),
-        const BottomNavigationBarItem(
-            icon: Icon(
-          Icons.notifications,
-        )),
+        const BottomNavigationBarItem(icon: Icon(Icons.notifications)),
         BottomNavigationBarItem(
             icon: GestureDetector(
           onTap: () => getImageFromGallery(),

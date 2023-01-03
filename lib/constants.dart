@@ -6,10 +6,10 @@ import 'package:image_picker/image_picker.dart';
 import 'main.dart';
 
 Color? kcolor = Colors.grey[850];
-Color? kbColor = Colors.grey;
+
+Color? kdollycolor = Colors.blueGrey[700];
 Icon? karrow = const Icon(Icons.arrow_forward_ios_rounded);
 Text ktext2 = const Text('');
-Widget kpicProfile = PicProfile();
 
 class PicProfile extends StatelessWidget {
   XFile? imgXFile;
